@@ -4,11 +4,10 @@ import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import TimeSelectorButton from './TimeSelectorButton'
 import { Colors, Typography, Spacing } from '../../styles'
 
+const timesOfDay = ['MORNING', 'AFTERNOON', 'EVENING']
+
 const TimeOfDaySelector = ({ timeSelectors, toggleTimeOfDaySelector }) => {
-  const count = timeSelectors.reduce(
-    (acc, selector) => (selector.isSelected ? acc + 1 : acc),
-    0
-  )
+  const count = timeSelectors.length
 
   let countText
   if (count === 3) {
@@ -26,14 +25,17 @@ const TimeOfDaySelector = ({ timeSelectors, toggleTimeOfDaySelector }) => {
         <Text style={styles.count}>{countText}</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        {timeSelectors.map(timeOfDaySelector => (
+        {timesOfDay.map(timeOfDay => {
+          const isSelected = timeSelectors.indexOf(timeOfDay) !== -1
+          return(
           <TimeSelectorButton
             onPressCallback={toggleTimeOfDaySelector}
-            selector={timeOfDaySelector}
+            selector={timeOfDay}
+            isSelected={isSelected}
             ownStyles={{ flex: 1 }}
-            key={timeOfDaySelector.type}
+            key={timeOfDay}
           />
-        ))}
+        )})}
       </View>
     </View>
   )

@@ -4,16 +4,7 @@ import { toggleTimeOfDaySelector } from '../../actions/timeOfDaySelectorActions'
 import TimeOfDaySelector from './TimeOfDaySelector'
 
 const mapStateToProps = state => {
-  const {
-    timeOfDay: {
-      morning: morningSelector,
-      afternoon: afternoonSelector,
-      evening: eveningSelector,
-    },
-  } = state
-
-  const timeSelectors = [morningSelector, afternoonSelector, eveningSelector]
-
+  const { timeOfDay: timeSelectors } = state
   return {
     timeSelectors,
   }

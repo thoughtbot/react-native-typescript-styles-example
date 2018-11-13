@@ -5,26 +5,8 @@ import DayOfWeekSelector from './DayOfWeekSelector'
 
 const mapStateToProps = state => {
   const {
-    dayOfWeek: {
-      mon: monSelector,
-      tue: tueSelector,
-      wed: wedSelector,
-      thu: thuSelector,
-      fri: friSelector,
-      sat: satSelector,
-      sun: sunSelector,
-    },
+    dayOfWeek: daySelectors
   } = state
-
-  const daySelectors = [
-    monSelector,
-    tueSelector,
-    wedSelector,
-    thuSelector,
-    friSelector,
-    satSelector,
-    sunSelector,
-  ]
 
   return {
     daySelectors,

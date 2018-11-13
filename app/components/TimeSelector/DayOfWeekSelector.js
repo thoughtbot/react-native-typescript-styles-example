@@ -5,11 +5,10 @@ import TimeSelectorButton from './TimeSelectorButton'
 
 import { Colors, Spacing, Typography } from '../../styles'
 
+const daysOfTheWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+
 const DayOfWeekSelector = ({ daySelectors, toggleDayOfWeekSelector }) => {
-  const count = daySelectors.reduce(
-    (acc, selector) => (selector.isSelected ? acc + 1 : acc),
-    0
-  )
+  const count = daySelectors.length
 
   let countText
   if (count === 7) {
@@ -27,13 +26,16 @@ const DayOfWeekSelector = ({ daySelectors, toggleDayOfWeekSelector }) => {
         <Text style={styles.count}>{countText}</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        {daySelectors.map(dayOfWeekSelector => (
+        {daysOfTheWeek.map(dayOfWeek => {
+          const isSelected = daySelectors.indexOf(dayOfWeek) !== -1
+          return (
           <TimeSelectorButton
             onPressCallback={toggleDayOfWeekSelector}
-            selector={dayOfWeekSelector}
-            key={dayOfWeekSelector.type}
+            isSelected={isSelected}
+            selector={dayOfWeek}
+            key={dayOfWeek}
           />
-        ))}
+        )})}
       </View>
     </View>
   )

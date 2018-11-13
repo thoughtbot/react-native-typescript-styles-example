@@ -11,7 +11,8 @@ class TimeSelectorButton extends Component {
 
   render() {
     const {
-      selector: { type, isSelected },
+      selector,
+      isSelected,
       ownStyles,
     } = this.props
 
@@ -22,7 +23,7 @@ class TimeSelectorButton extends Component {
           text: [styles.buttonText, styles.buttonTextUnselected],
         }
 
-    const title = type.toUpperCase()
+    const title = selector
 
     return (
       <TouchableOpacity

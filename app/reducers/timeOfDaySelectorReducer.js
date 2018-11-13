@@ -1,25 +1,23 @@
 import { TOGGLE_TIME_OF_DAY_SELECTOR } from '../actions/timeOfDaySelectorActions'
 import { RESET_ALL_SELECTORS } from '../actions/selectorActions'
 
-const initialState = {
-  morning: { type: 'morning', isSelected: false },
-  afternoon: { type: 'afternoon', isSelected: false },
-  evening: { type: 'evening', isSelected: false },
-}
+const initialState = []
 
 const timeOfDaySelectorsReducer = (state = initialState, action) => {
   Object.freeze(state)
-  const nextState = { ...state }
-  const { timeOfDaySelector } = action
+  const nextState = [ ...state ]
+  const { timeOfDay } = action
 
   switch (action.type) {
     case TOGGLE_TIME_OF_DAY_SELECTOR: {
-      const { type, isSelected } = timeOfDaySelector
-      nextState[type] = {
-        type,
-        isSelected: !isSelected,
+    const timeIndex = nextState.indexOf(timeOfDay)
+      if (timeIndex === -1) {
+        nextState.push(timeOfDay)
+        return nextState
+      } else {
+        nextState.splice(timeIndex, 1)
+        return nextState
       }
-      return nextState
     }
     case RESET_ALL_SELECTORS:
       return initialState
