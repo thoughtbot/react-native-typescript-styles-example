@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
-import { Colors, Spacing } from '../../styles'
+import { Colors, Spacing, Typography } from '../../styles'
 
 class TimeSelectorFooter extends Component {
   render() {
@@ -15,20 +15,10 @@ class TimeSelectorFooter extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    backgroundColor: Colors.background,
-    borderTopColor: Colors.border,
-    borderTopWidth: 2,
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'row',
-    height: 40,
-    maxHeight: 60,
-    justifyContent: 'center',
+    ...Typography.screenFooter,
   },
   footerText: {
-    color: Colors.baseText,
-    paddingTop: Spacing.smallest,
+    ...Typography.underlined,
   },
 })
 

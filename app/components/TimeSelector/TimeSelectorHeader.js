@@ -13,11 +13,11 @@ class TimeSelectorHeader extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image style={styles.ralphIcon} source={ralphIcon} />
         </View>
-        <View style={styles.container}>
+        <View style={styles.titleContainer}>
           <TouchableOpacity
             onPress={this.onPressReset}
             style={styles.resetButton}
@@ -33,17 +33,13 @@ class TimeSelectorHeader extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    backgroundColor: Colors.background,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    borderBottomColor: Colors.border,
-    borderBottomWidth: Spacing.border,
   },
   imageContainer: {
     width: 400,
     height: 100,
+  },
+  titleContainer: {
+    ...Typography.screenHeader,
   },
   ralphIcon: {
     flex: 1,
@@ -58,7 +54,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   resetButton: {
-    left: Spacing.base,
+    left: Spacing.sectionPadding,
     position: 'absolute',
   },
   resetButtonText: {

@@ -44,7 +44,7 @@ const TimeOfDaySelector = ({ timeSelectors, toggleTimeOfDaySelector }) => {
 const styles = StyleSheet.create({
   selectorContainer: {
     backgroundColor: Colors.background,
-    padding: Spacing.base,
+    padding: Spacing.sectionPadding,
   },
   headerContainer: {
     alignItems: 'baseline',
@@ -52,16 +52,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   header: {
-    color: Colors.baseText,
-    fontSize: Typography.extraLargeFontSize,
+    ...Typography.sectionHeader,
     flex: 3,
-    marginBottom: Spacing.base,
   },
   count: {
-    color: Colors.baseText,
+    ...Typography.sectionHeader,
     flex: 1,
-    fontSize: Typography.extraLargeFontSize,
-    marginBottom: Spacing.base,
   },
   buttonsContainer: {
     flexDirection: 'row',

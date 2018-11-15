@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   selectorContainer: {
     backgroundColor: Colors.background,
     flex: 1,
-    padding: Spacing.base,
+    padding: Spacing.sectionPadding,
   },
   headerContainer: {
     flexDirection: 'row',
@@ -53,16 +53,12 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
   },
   header: {
-    fontSize: Typography.extraLargeFontSize,
-    color: Colors.baseText,
+    ...Typography.sectionHeader,
     flex: 3,
-    marginBottom: Spacing.base,
   },
   count: {
-    fontSize: Typography.extraLargeFontSize,
-    color: Colors.baseText,
+    ...Typography.sectionHeader,
     flex: 1,
-    marginBottom: Spacing.base,
   },
   buttonsContainer: {
     flexDirection: 'row',

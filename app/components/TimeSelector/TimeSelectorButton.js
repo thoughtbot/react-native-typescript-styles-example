@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
-import { Colors, Typography, Spacing } from '../../styles'
+import { Buttons, Colors, Typography, Spacing } from '../../styles'
 
 class TimeSelectorButton extends Component {
   handlePressSelector = () => {
@@ -10,11 +10,7 @@ class TimeSelectorButton extends Component {
   }
 
   render() {
-    const {
-      selector,
-      isSelected,
-      ownStyles,
-    } = this.props
+    const { selector, isSelected, ownStyles } = this.props
 
     const selectedStyles = isSelected
       ? { button: [styles.button], text: [styles.buttonText] }
@@ -23,15 +19,13 @@ class TimeSelectorButton extends Component {
           text: [styles.buttonText, styles.buttonTextUnselected],
         }
 
-    const title = selector
-
     return (
       <TouchableOpacity
         onPress={this.handlePressSelector}
         style={[ownStyles, selectedStyles.button]}
       >
         <Text numberOfLines={1} style={selectedStyles.text}>
-          {title}
+          {selector}
         </Text>
       </TouchableOpacity>
     )
@@ -40,25 +34,17 @@ class TimeSelectorButton extends Component {
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
-    backgroundColor: Colors.selected,
-    borderRadius: 50,
-    margin: 2,
-    paddingHorizontal: Spacing.small,
-    paddingVertical: 10,
-    width: 75,
+    ...Buttons.smallRounded,
+    ...Buttons.selected,
   },
   buttonText: {
-    color: Colors.white,
-    fontSize: Typography.smallestFontSize,
-    fontWeight: 'bold',
-    letterSpacing: 1,
+    ...Buttons.text,
   },
   buttonTextUnselected: {
-    color: Colors.baseText,
+    ...Buttons.textUnselected,
   },
   buttonUnselected: {
-    backgroundColor: Colors.unselected,
+    ...Buttons.unselected,
   },
 })
 

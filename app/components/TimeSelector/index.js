@@ -6,7 +6,7 @@ import TimeSelectorFooter from './TimeSelectorFooter'
 import DayOfWeekSelectorContainer from './DayOfWeekSelectorContainer'
 import TimeOfDaySelectorContainer from './TimeOfDaySelectorContainer'
 
-import { Colors } from '../../styles'
+import { Colors, Spacing } from '../../styles'
 
 class TimeSelectorScreen extends Component {
   render() {
