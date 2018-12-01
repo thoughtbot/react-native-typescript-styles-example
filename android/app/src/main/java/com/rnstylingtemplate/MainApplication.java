@@ -1,4 +1,4 @@
-package com.rnstylingsamples;
+package com.rnstylingtemplate;
 
 import android.app.Application;
 
