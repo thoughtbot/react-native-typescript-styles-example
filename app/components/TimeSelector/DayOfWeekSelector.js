@@ -2,42 +2,51 @@ import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
 import TimeSelectorButton from './TimeSelectorButton'
+import { SelectionConsumer } from './SelectionContext'
 
 import { Colors, Spacing, Typography } from '../../styles'
 
 const daysOfTheWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 
-const DayOfWeekSelector = ({ daySelectors, toggleDayOfWeekSelector }) => {
-  const count = daySelectors.length
-
-  let countText
-  if (count === 7) {
-    countText = '(All)'
-  } else if (count === 0) {
-    countText = '(None)'
-  } else {
-    countText = `(${count})`
-  }
-
+const DayOfWeekSelector = () => {
   return (
-    <View style={styles.selectorContainer}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.header}>Days of the Week</Text>
-        <Text style={styles.count}>{countText}</Text>
-      </View>
-      <View style={styles.buttonsContainer}>
-        {daysOfTheWeek.map(dayOfWeek => {
-          const isSelected = daySelectors.indexOf(dayOfWeek) !== -1
-          return (
-          <TimeSelectorButton
-            onPressCallback={toggleDayOfWeekSelector}
-            isSelected={isSelected}
-            selector={dayOfWeek}
-            key={dayOfWeek}
-          />
-        )})}
-      </View>
-    </View>
+    <SelectionConsumer>
+      {({ daySelections, toggleDayOfWeekSelector }) => {
+        const count = daySelections.length
+
+        let countText
+        if (count === 7) {
+          countText = '(All)'
+        } else if (count === 0) {
+          countText = '(None)'
+        } else {
+          countText = `(${count})`
+        }
+
+        return (
+          <View style={styles.selectorContainer}>
+            <View style={styles.headerContainer}>
+              <Text style={styles.header}>Days of the Week</Text>
+              <Text style={styles.count}>{countText}</Text>
+            </View>
+            <View style={styles.buttonsContainer}>
+              {daysOfTheWeek.map(dayOfWeek => {
+                const isSelected = daySelections.indexOf(dayOfWeek) !== -1
+
+                return (
+                  <TimeSelectorButton
+                    onPressCallback={toggleDayOfWeekSelector}
+                    isSelected={isSelected}
+                    selector={dayOfWeek}
+                    key={dayOfWeek}
+                  />
+                )
+              })}
+            </View>
+          </View>
+        )
+      }}
+    </SelectionConsumer>
   )
 }
 

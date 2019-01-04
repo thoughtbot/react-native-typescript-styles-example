@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 
-import TimeSelectorHeaderContainer from './TimeSelectorHeaderContainer'
+import TimeSelectorHeader from './TimeSelectorHeader'
 import TimeSelectorFooter from './TimeSelectorFooter'
-import DayOfWeekSelectorContainer from './DayOfWeekSelectorContainer'
-import TimeOfDaySelectorContainer from './TimeOfDaySelectorContainer'
+import DayOfWeekSelector from './DayOfWeekSelector'
+import TimeOfDaySelector from './TimeOfDaySelector'
+
+import { SelectionProvider } from './SelectionContext'
 
 import { Colors, Spacing } from '../../styles'
 
 class TimeSelectorScreen extends Component {
   render() {
     return (
-      <View style={styles.outerContainer}>
-        <TimeSelectorHeaderContainer />
-        <ScrollView style={styles.container}>
-          <DayOfWeekSelectorContainer />
-          <TimeOfDaySelectorContainer />
-        </ScrollView>
-        <TimeSelectorFooter />
-      </View>
+      <SelectionProvider>
+        <View style={styles.outerContainer}>
+          <TimeSelectorHeader />
+          <ScrollView style={styles.container}>
+            <DayOfWeekSelector />
+            <TimeOfDaySelector />
+          </ScrollView>
+          <TimeSelectorFooter />
+        </View>
+      </SelectionProvider>
     )
   }
 }

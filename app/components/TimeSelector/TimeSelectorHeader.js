@@ -1,39 +1,38 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native'
 
+import { SelectionConsumer } from './SelectionContext'
+
 import { Colors, Typography, Spacing } from '../../styles'
 import ralphIcon from '../../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png'
 
-class TimeSelectorHeader extends Component {
-  onPressReset = () => {
-    const { resetAllFilters } = this.props
-
-    resetAllFilters()
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.imageContainer}>
-          <Image style={styles.ralphIcon} source={ralphIcon} />
-        </View>
-        <View style={styles.titleContainer}>
-          <TouchableOpacity
-            onPress={this.onPressReset}
-            style={styles.resetButton}
-          >
-            <Text style={styles.resetButtonText}>Reset</Text>
-          </TouchableOpacity>
-          <Text style={styles.title}>Time Selectors</Text>
-        </View>
-      </View>
-    )
-  }
+const TimeSelectorHeader = () => {
+  return (
+    <SelectionConsumer>
+      {({ resetAllSelections }) => {
+        return (
+          <View style={styles.container}>
+            <View style={styles.imageContainer}>
+              <Image style={styles.ralphIcon} source={ralphIcon} />
+            </View>
+            <View style={styles.titleContainer}>
+              <TouchableOpacity
+                onPress={resetAllSelections}
+                style={styles.resetButton}
+              >
+                <Text style={styles.resetButtonText}>Reset</Text>
+              </TouchableOpacity>
+              <Text style={styles.title}>Time Selectors</Text>
+            </View>
+          </View>
+        )
+      }}
+    </SelectionConsumer>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-  },
+  container: {},
   imageContainer: {
     width: 400,
     height: 100,
