@@ -8,7 +8,7 @@ import TimeOfDaySelector from './TimeOfDaySelector'
 
 import { SelectionProvider } from './SelectionContext'
 
-import { Colors, Spacing } from '../../styles'
+import { Colors, Spacing } from '../styles'
 
 class TimeSelectorScreen extends Component {
   render() {

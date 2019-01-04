@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-import { Platform, StyleSheet, Text, SafeAreaView } from 'react-native'
+import React from 'react'
 
-import RootScreen from './app/components'
+import RootScreen from './src'
 
-export default class App extends Component {
-  render() {
-    return <RootScreen />
-  }
-}
+const App = () => <RootScreen />
+
+export default App

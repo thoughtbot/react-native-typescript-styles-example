@@ -3,8 +3,8 @@ import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native'
 
 import { SelectionConsumer } from './SelectionContext'
 
-import { Colors, Typography, Spacing } from '../../styles'
-import ralphIcon from '../../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png'
+import { Colors, Typography, Spacing } from '../styles'
+import ralphIcon from '../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png'
 
 const TimeSelectorHeader = () => {
   return (

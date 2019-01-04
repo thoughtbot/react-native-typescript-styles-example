@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native'
 import TimeSelectorButton from './TimeSelectorButton'
 import { SelectionConsumer } from './SelectionContext'
 
-import { Colors, Spacing, Typography } from '../../styles'
+import { Colors, Spacing, Typography } from '../styles'
 
 const daysOfTheWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 

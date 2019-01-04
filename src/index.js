@@ -3,7 +3,7 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 
 import TimeSelectorScreen from './TimeSelector'
 
-import { Colors } from '../styles'
+import { Colors } from './styles'
 
 const RootScreen = () => (
   <SafeAreaView style={styles.container}>

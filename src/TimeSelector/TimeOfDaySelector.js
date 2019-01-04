@@ -4,7 +4,7 @@ import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import TimeSelectorButton from './TimeSelectorButton'
 import { SelectionConsumer } from './SelectionContext'
 
-import { Colors, Typography, Spacing } from '../../styles'
+import { Colors, Typography, Spacing } from '../styles'
 
 const timesOfDay = ['MORNING', 'AFTERNOON', 'EVENING']
 
