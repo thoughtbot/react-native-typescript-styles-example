@@ -16,7 +16,7 @@ export const text = {
 
 export const textUnselected = {
   ...text,
-  color: Colors.darkGray,
+  color: Colors.mediumGray,
 }
 
 export const small = {
@@ -36,14 +36,10 @@ export const rounded = {
 
 export const selected = {
   backgroundColor: Colors.selected,
-  borderColor: Colors.thoughtbotRed,
-  borderWidth: 1,
 }
 
 export const unselected = {
   backgroundColor: Colors.unselected,
-  borderColor: Colors.darkGray,
-  borderWidth: 1,
 }
 
 export const smallRounded = {

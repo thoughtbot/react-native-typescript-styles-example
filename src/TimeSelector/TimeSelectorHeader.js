@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     ...Typography.screenHeader,
+    alignItems: "center",
   },
   ralphIcon: {
     flex: 1,

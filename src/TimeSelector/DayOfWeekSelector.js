@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   count: {
     ...Typography.sectionHeader,
     flex: 1,
+    textAlign: "right",
   },
   buttonsContainer: {
     flexDirection: 'row',
