@@ -16,9 +16,10 @@ class TimeSelectorFooter extends Component {
 const styles = StyleSheet.create({
   container: {
     ...Typography.screenFooter,
+    paddingVertical: Spacing.base,
   },
   footerText: {
-    ...Typography.underlined,
+    ...Typography.link,
   },
 })
 

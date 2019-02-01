@@ -29,12 +29,12 @@ class TimeSelectorScreen extends Component {
 
 const styles = StyleSheet.create({
   outerContainer: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.background,
     flex: 1,
     justifyContent: 'space-around',
   },
   container: {
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.sectionBackground,
     display: 'flex',
     flex: 1,
   },

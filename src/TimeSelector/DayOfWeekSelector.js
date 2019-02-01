@@ -16,11 +16,11 @@ const DayOfWeekSelector = () => {
 
         let countText
         if (count === 7) {
-          countText = '(All)'
+          countText = 'All selected'
         } else if (count === 0) {
-          countText = '(None)'
+          countText = 'None selected'
         } else {
-          countText = `(${count})`
+          countText = `${count} selected`
         }
 
         return (
@@ -52,29 +52,34 @@ const DayOfWeekSelector = () => {
 
 const styles = StyleSheet.create({
   selectorContainer: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.background,
+    borderRadius: 5,
     flex: 1,
-    padding: Spacing.sectionPadding,
+    margin: Spacing.sectionPadding,
+    paddingHorizontal: Spacing.small,
+    paddingVertical: Spacing.base,
   },
   headerContainer: {
-    alignItems: 'baseline',
+    alignItems: 'center',
     backgroundColor: Colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: Spacing.base,
   },
   header: {
     ...Typography.sectionHeader,
-    flex: 3,
+    flex: 2,
   },
   count: {
-    ...Typography.sectionHeader,
-    flex: 1,
+    ...Typography.count,
+    flex: 2,
     textAlign: "right",
   },
   buttonsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     flex: 1,
+    justifyContent: 'center'
   },
 })
 

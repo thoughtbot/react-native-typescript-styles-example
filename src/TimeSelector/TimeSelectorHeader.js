@@ -16,13 +16,13 @@ const TimeSelectorHeader = () => {
               <Image style={styles.ralphIcon} source={ralphIcon} />
             </View>
             <View style={styles.titleContainer}>
+              <Text style={styles.title}>Time Selectors</Text>
               <TouchableOpacity
                 onPress={resetAllSelections}
                 style={styles.resetButton}
               >
                 <Text style={styles.resetButtonText}>Reset</Text>
               </TouchableOpacity>
-              <Text style={styles.title}>Time Selectors</Text>
             </View>
           </View>
         )
@@ -34,12 +34,14 @@ const TimeSelectorHeader = () => {
 const styles = StyleSheet.create({
   container: {},
   imageContainer: {
-    width: 400,
+    width: 350,
     height: 100,
   },
   titleContainer: {
     ...Typography.screenHeader,
-    alignItems: "center",
+    justifyContent: 'flex-start',
+    marginVertical: Spacing.base,
+    paddingHorizontal: Spacing.base,
   },
   ralphIcon: {
     flex: 1,
@@ -48,18 +50,14 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   title: {
-    color: Colors.baseText,
-    fontSize: Typography.largeFontSize,
-    paddingVertical: Spacing.small,
-    textAlign: 'center',
+    ...Typography.screenHeader,
   },
   resetButton: {
-    left: Spacing.sectionPadding,
+    right: Spacing.larger,
     position: 'absolute',
   },
   resetButtonText: {
-    color: Colors.baseText,
-    fontSize: Typography.baseFontSize,
+    ...Typography.link,
   },
 })
 
