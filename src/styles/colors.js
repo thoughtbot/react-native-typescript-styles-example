@@ -13,7 +13,7 @@ export const white = '#ffffff'
 
 export const baseText = darkGray
 export const darkText = darkestGray
-export const background = white
+export const background = offWhite
 export const border = thoughtbotRed
 export const selected = thoughtbotRed
 export const unselected = lightGray

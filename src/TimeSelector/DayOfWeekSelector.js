@@ -52,14 +52,15 @@ const DayOfWeekSelector = () => {
 
 const styles = StyleSheet.create({
   selectorContainer: {
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.white,
     flex: 1,
     padding: Spacing.sectionPadding,
   },
   headerContainer: {
+    alignItems: 'baseline',
+    backgroundColor: Colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'baseline',
   },
   header: {
     ...Typography.sectionHeader,
