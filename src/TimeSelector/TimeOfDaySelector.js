@@ -16,11 +16,11 @@ const TimeOfDaySelector = () => {
 
         let countText
         if (count === 3) {
-          countText = '(All)'
+          countText = 'All selected'
         } else if (count === 0) {
-          countText = '(None)'
+          countText = 'None selected'
         } else {
-          countText = `(${count})`
+          countText = `${count} selected`
         }
 
         return (
@@ -53,25 +53,31 @@ const TimeOfDaySelector = () => {
 const styles = StyleSheet.create({
   selectorContainer: {
     backgroundColor: Colors.background,
-    padding: Spacing.sectionPadding,
+    borderRadius: 5,
+    flex: 1,
+    marginHorizontal: Spacing.sectionPadding,
+    paddingHorizontal: Spacing.small,
+    paddingVertical: Spacing.base,
   },
   headerContainer: {
     alignItems: 'baseline',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: Spacing.base,
   },
   header: {
     ...Typography.sectionHeader,
-    flex: 3,
+    flex: 2,
   },
   count: {
-    ...Typography.sectionHeader,
-    flex: 1,
+    ...Typography.count,
+    flex: 2,
     textAlign: "right",
   },
   buttonsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    flex: 1,
   },
 })
 

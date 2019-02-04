@@ -12,57 +12,51 @@ export const headerFontSize = 18
 
 const base = {
   alignItems: 'center',
-  backgroundColor: Colors.background,
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
 }
 
-export const underlined = {
-  textDecorationLine: 'underline',
+export const link = {
+  color: Colors.thoughtbotRed,
+  fontWeight: 'bold',
 }
 
 export const bodyText = {
-  color: Colors.shuttleGray,
+  color: Colors.baseText,
   fontSize: smallFontSize,
   lineHeight: 19,
 }
 
 export const headerText = {
-  color: Colors.shuttleGray,
+  color: Colors.darkText,
   fontSize: headerFontSize,
-  paddingBottom: Spacing.base,
+  fontWeight: 'bold',
 }
 
 export const descriptionText = {
-  color: Colors.shuttleGray,
+  color: Colors.baseText,
   fontSize: smallFontSize,
-  paddingTop: Spacing.small,
-}
-
-export const bottomBorder = {
-  borderBottomColor: Colors.border,
-  borderBottomWidth: Spacing.border,
-}
-
-export const topBorder = {
-  borderTopColor: Colors.border,
-  borderTopWidth: Spacing.border,
 }
 
 export const screenHeader = {
   ...base,
-  ...headerText,
-  ...bottomBorder,
+  color: Colors.baseText,
+  fontSize: largeFontSize,
+  fontWeight: 'bold',
 }
 
 export const screenFooter = {
   ...base,
   ...descriptionText,
-  ...topBorder,
 }
 
 export const sectionHeader = {
   ...base,
   ...headerText,
+}
+
+export const count = {
+  ...base,
+  ...descriptionText,
 }

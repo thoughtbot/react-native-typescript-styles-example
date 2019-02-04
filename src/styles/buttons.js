@@ -4,7 +4,8 @@ import * as Typography from './typography'
 
 export const base = {
   alignItems: 'center',
-  margin: Spacing.smallest,
+  marginRight: Spacing.smallest,
+  marginVertical: Spacing.tiny,
 }
 
 export const text = {
