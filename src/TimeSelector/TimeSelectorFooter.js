@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     ...Typography.link,
+    height: '100%',
   },
 })
 

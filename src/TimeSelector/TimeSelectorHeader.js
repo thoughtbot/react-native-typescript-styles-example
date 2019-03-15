@@ -32,26 +32,30 @@ const TimeSelectorHeader = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {},
-  imageContainer: {
-    width: 350,
-    height: 100,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  titleContainer: {
-    ...Typography.screenHeader,
-    justifyContent: 'flex-start',
-    marginVertical: Spacing.base,
-    paddingHorizontal: Spacing.base,
+  imageContainer: {
+    width: '100%',
+    flex: 3,
   },
   ralphIcon: {
     flex: 1,
-    width: null,
-    height: null,
-    resizeMode: 'contain',
+    width: '100%',
+  },
+  titleContainer: {
+    ...Typography.screenHeader,
+    flex: 1,
+    width: '100%',
+    paddingHorizontal: Spacing.base,
+    justifyContent: 'flex-start',
   },
   title: {
     ...Typography.screenHeader,
   },
+
   resetButton: {
     right: Spacing.larger,
     position: 'absolute',

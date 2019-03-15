@@ -14,13 +14,19 @@ class TimeSelectorScreen extends Component {
   render() {
     return (
       <SelectionProvider>
-        <View style={styles.outerContainer}>
-          <TimeSelectorHeader />
-          <ScrollView style={styles.container}>
-            <DayOfWeekSelector />
-            <TimeOfDaySelector />
-          </ScrollView>
-          <TimeSelectorFooter />
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <TimeSelectorHeader />
+          </View>
+          <View style={styles.body}>
+            <ScrollView>
+              <DayOfWeekSelector />
+              <TimeOfDaySelector />
+            </ScrollView>
+          </View>
+          <View style={styles.footer}>
+            <TimeSelectorFooter />
+          </View>
         </View>
       </SelectionProvider>
     )
@@ -28,16 +34,20 @@ class TimeSelectorScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  outerContainer: {
+  container: {
     backgroundColor: Colors.background,
     flex: 1,
-    justifyContent: 'space-around',
   },
-  container: {
+  header: {
+    flex: 3,
+  },
+  body: {
+    flex: 8,
     backgroundColor: Colors.sectionBackground,
-    display: 'flex',
-    flex: 1,
   },
+  footer: {
+    flex: 1,
+  }
 })
 
 export default TimeSelectorScreen
