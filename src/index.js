@@ -2,12 +2,13 @@ import React from 'react'
 import { StyleSheet, SafeAreaView } from 'react-native'
 
 import TimeSelectorScreen from './TimeSelector'
+import IssueList from './IssueList'
 
 import { Colors } from './styles'
 
 const RootScreen = () => (
   <SafeAreaView style={styles.container}>
-    <TimeSelectorScreen />
+    <IssueList />
   </SafeAreaView>
 )
 

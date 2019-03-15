@@ -27,7 +27,7 @@ const TimeSelectorHeader = () => {
           </View>
         )
       }}
-    </SelectionConsumer>
+     </SelectionConsumer>
   )
 }
 
