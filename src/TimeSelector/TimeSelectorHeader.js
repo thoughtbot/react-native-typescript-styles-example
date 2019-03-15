@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageContainer: {
-    ...Layout.headerImage,
+    width: '100%',
+    height: 100,
   },
   ralphIcon: {
     flex: 1,
