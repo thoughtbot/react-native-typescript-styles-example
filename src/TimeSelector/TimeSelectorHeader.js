@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native'
 
 import { SelectionConsumer } from './SelectionContext'
 
-import { Colors, Typography, Spacing } from '../styles'
+import { Colors, Typography, Spacing, Layout } from '../styles'
 import ralphIcon from '../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png'
 
 const TimeSelectorHeader = () => {
@@ -32,22 +32,25 @@ const TimeSelectorHeader = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {},
-  imageContainer: {
-    width: 350,
-    height: 100,
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  titleContainer: {
-    ...Typography.screenHeader,
-    justifyContent: 'flex-start',
-    marginVertical: Spacing.base,
-    paddingHorizontal: Spacing.base,
+  imageContainer: {
+    ...Layout.headerImage,
   },
   ralphIcon: {
     flex: 1,
-    width: null,
-    height: null,
+    width: '100%',
+    height: '100%',
     resizeMode: 'contain',
+  },
+  titleContainer: {
+    justifyContent: 'flex-start',
+    width: '100%',
+    marginVertical: Spacing.base,
+    paddingHorizontal: Spacing.base,
+    ...Typography.screenHeader,
   },
   title: {
     ...Typography.screenHeader,
