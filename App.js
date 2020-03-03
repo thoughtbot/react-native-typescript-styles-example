@@ -1,7 +1,16 @@
-import React from 'react'
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
 
-import RootScreen from './src'
+import React from 'react';
+import RootScreen from './src';
 
-const App = () => <RootScreen />
+const App = () => {
+  return <RootScreen />;
+};
 
-export default App
+export default App;
