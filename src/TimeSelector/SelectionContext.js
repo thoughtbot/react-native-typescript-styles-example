@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const { Provider, Consumer } = React.createContext()
 
@@ -8,7 +8,7 @@ class SelectionProvider extends React.Component {
     timeSelections: [],
   }
 
-  toggleDayOfWeekSelector = dayOfWeek => {
+  toggleDayOfWeekSelector = (dayOfWeek) => {
     const { daySelections } = this.state
     const nextSelections = [...daySelections]
 
@@ -22,7 +22,7 @@ class SelectionProvider extends React.Component {
     this.setState({ daySelections: nextSelections })
   }
 
-  toggleTimeOfDaySelector = timeOfDay => {
+  toggleTimeOfDaySelector = (timeOfDay) => {
     const { timeSelections } = this.state
     const nextSelections = [...timeSelections]
 
@@ -37,7 +37,7 @@ class SelectionProvider extends React.Component {
   }
 
   resetAllSelections = () => {
-    console.log('reseting selections')
+    console.log("reseting selections")
     this.setState({ daySelections: [], timeSelections: [] })
   }
 

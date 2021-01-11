@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import React, { Component } from "react"
+import { Text, View, TouchableOpacity, Image, StyleSheet } from "react-native"
 
-import { SelectionConsumer } from './SelectionContext'
+import { SelectionConsumer } from "./SelectionContext"
 
-import { Colors, Typography, Spacing } from '../styles'
-import ralphIcon from '../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png'
+import { Colors, Typography, Spacing } from "../styles"
+import ralphIcon from "../assets/thoughtbot-assets-pack/horizontal/png/horizontal_default.png"
 
 const TimeSelectorHeader = () => {
   return (
@@ -34,23 +34,23 @@ const TimeSelectorHeader = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   imageContainer: {
-    width: '100%',
+    width: "100%",
     flex: 3,
   },
   ralphIcon: {
     flex: 1,
-    width: '100%',
+    width: "100%",
   },
   titleContainer: {
     ...Typography.screenHeader,
     flex: 1,
-    width: '100%',
+    width: "100%",
     paddingHorizontal: Spacing.base,
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
   },
   title: {
     ...Typography.screenHeader,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
 
   resetButton: {
     right: Spacing.larger,
-    position: 'absolute',
+    position: "absolute",
   },
   resetButtonText: {
     ...Typography.link,

@@ -6,7 +6,11 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "tsc": "tsc --noEmit",
+    "prettier": "prettier \"src/**/*.+(js|jsx|ts|tsx|json)\"",
+    "format": "yarn prettier --write",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "validate": "yarn prettier --list-different && yarn tsc && yarn lint"
   },
   "dependencies": {
     "react": "16.13.1",

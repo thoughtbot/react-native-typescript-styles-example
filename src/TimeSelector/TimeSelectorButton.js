@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import React, { Component } from "react"
+import { TouchableOpacity, Text, StyleSheet } from "react-native"
 
-import { Buttons, Colors, Typography, Spacing } from '../styles'
+import { Buttons, Colors, Typography, Spacing } from "../styles"
 
 class TimeSelectorButton extends Component {
   handlePressSelector = () => {

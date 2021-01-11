@@ -1,12 +1,12 @@
-import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React from "react"
+import { Text, View, StyleSheet } from "react-native"
 
-import TimeSelectorButton from './TimeSelectorButton'
-import { SelectionConsumer } from './SelectionContext'
+import TimeSelectorButton from "./TimeSelectorButton"
+import { SelectionConsumer } from "./SelectionContext"
 
-import { Colors, Spacing, Typography } from '../styles'
+import { Colors, Spacing, Typography } from "../styles"
 
-const daysOfTheWeek = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+const daysOfTheWeek = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
 const DayOfWeekSelector = () => {
   return (
@@ -16,9 +16,9 @@ const DayOfWeekSelector = () => {
 
         let countText
         if (count === 7) {
-          countText = 'All selected'
+          countText = "All selected"
         } else if (count === 0) {
-          countText = 'None selected'
+          countText = "None selected"
         } else {
           countText = `${count} selected`
         }
@@ -30,7 +30,7 @@ const DayOfWeekSelector = () => {
               <Text style={styles.count}>{countText}</Text>
             </View>
             <View style={styles.buttonsContainer}>
-              {daysOfTheWeek.map(dayOfWeek => {
+              {daysOfTheWeek.map((dayOfWeek) => {
                 const isSelected = daySelections.indexOf(dayOfWeek) !== -1
 
                 return (
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.base,
   },
   headerContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     backgroundColor: Colors.white,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: Spacing.base,
   },
   header: {
@@ -76,10 +76,10 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
 })
 

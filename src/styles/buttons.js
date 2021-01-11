@@ -1,9 +1,9 @@
-import * as Colors from './colors'
-import * as Spacing from './spacing'
-import * as Typography from './typography'
+import * as Colors from "./colors"
+import * as Spacing from "./spacing"
+import * as Typography from "./typography"
 
 export const base = {
-  alignItems: 'center',
+  alignItems: "center",
   marginRight: Spacing.smallest,
   marginVertical: Spacing.tiny,
 }
@@ -11,7 +11,7 @@ export const base = {
 export const text = {
   color: Colors.white,
   fontSize: Typography.smallestFontSize,
-  fontWeight: 'bold',
+  fontWeight: "bold",
   letterSpacing: 1,
 }
 

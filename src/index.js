@@ -1,9 +1,9 @@
-import React from 'react'
-import { StyleSheet, SafeAreaView } from 'react-native'
+import React from "react"
+import { StyleSheet, SafeAreaView } from "react-native"
 
-import TimeSelectorScreen from './TimeSelector'
+import TimeSelectorScreen from "./TimeSelector"
 
-import { Colors } from './styles'
+import { Colors } from "./styles"
 
 const RootScreen = () => (
   <SafeAreaView style={styles.container}>
@@ -14,8 +14,8 @@ const RootScreen = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: Colors.background,
   },
 })

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Component } from "react"
+import { Text, View, StyleSheet } from "react-native"
 
-import { Colors, Spacing, Typography } from '../styles'
+import { Colors, Spacing, Typography } from "../styles"
 
 class TimeSelectorFooter extends Component {
   render() {
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     ...Typography.link,
-    height: '100%',
+    height: "100%",
   },
 })
 

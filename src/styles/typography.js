@@ -1,5 +1,5 @@
-import * as Colors from './colors'
-import * as Spacing from './spacing'
+import * as Colors from "./colors"
+import * as Spacing from "./spacing"
 
 export const extraLargeFontSize = 32
 export const largeFontSize = 24
@@ -11,15 +11,15 @@ export const largeHeaderFontSize = 20
 export const headerFontSize = 18
 
 const base = {
-  alignItems: 'center',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
 }
 
 export const link = {
   color: Colors.thoughtbotRed,
-  fontWeight: 'bold',
+  fontWeight: "bold",
 }
 
 export const bodyText = {
@@ -31,7 +31,7 @@ export const bodyText = {
 export const headerText = {
   color: Colors.darkText,
   fontSize: headerFontSize,
-  fontWeight: 'bold',
+  fontWeight: "bold",
 }
 
 export const descriptionText = {
@@ -43,7 +43,7 @@ export const screenHeader = {
   ...base,
   color: Colors.baseText,
   fontSize: largeFontSize,
-  fontWeight: 'bold',
+  fontWeight: "bold",
 }
 
 export const screenFooter = {

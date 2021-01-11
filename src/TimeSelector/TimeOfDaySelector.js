@@ -1,12 +1,12 @@
-import React from 'react'
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import React from "react"
+import { Text, View, TouchableOpacity, StyleSheet } from "react-native"
 
-import TimeSelectorButton from './TimeSelectorButton'
-import { SelectionConsumer } from './SelectionContext'
+import TimeSelectorButton from "./TimeSelectorButton"
+import { SelectionConsumer } from "./SelectionContext"
 
-import { Colors, Typography, Spacing } from '../styles'
+import { Colors, Typography, Spacing } from "../styles"
 
-const timesOfDay = ['MORNING', 'AFTERNOON', 'EVENING']
+const timesOfDay = ["MORNING", "AFTERNOON", "EVENING"]
 
 const TimeOfDaySelector = () => {
   return (
@@ -16,9 +16,9 @@ const TimeOfDaySelector = () => {
 
         let countText
         if (count === 3) {
-          countText = 'All selected'
+          countText = "All selected"
         } else if (count === 0) {
-          countText = 'None selected'
+          countText = "None selected"
         } else {
           countText = `${count} selected`
         }
@@ -30,7 +30,7 @@ const TimeOfDaySelector = () => {
               <Text style={styles.count}>{countText}</Text>
             </View>
             <View style={styles.buttonsContainer}>
-              {timesOfDay.map(timeOfDay => {
+              {timesOfDay.map((timeOfDay) => {
                 const isSelected = timeSelections.indexOf(timeOfDay) !== -1
                 return (
                   <TimeSelectorButton
@@ -60,9 +60,9 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.base,
   },
   headerContainer: {
-    alignItems: 'baseline',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: "baseline",
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: Spacing.base,
   },
   header: {
@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     flex: 1,
   },
 })
