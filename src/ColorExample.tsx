@@ -7,7 +7,7 @@ const ColorExample: FunctionComponent = () => {
   return (
     <View style={style.container}>
       <View style={style.headerContainer}>
-        <Text style={style.headerText}>Color</Text>
+        <Text style={style.headerText}>Colors</Text>
       </View>
       <View style={style.sectionContianer}>
         <View style={style.subHeaderContainer}>
@@ -121,7 +121,7 @@ const style = StyleSheet.create({
     ...Typography.header.x40,
   },
   colorContainer: {
-    marginBottom: Sizing.x10,
+    marginBottom: Sizing.x5,
     flexDirection: "row",
     alignItems: "center",
   },

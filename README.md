@@ -1,18 +1,54 @@
-# RNStylingTemplate
+# React Native TypeScript Styles Example
 
-RNStylingTemplate is a template project demonstrating how to apply styles in
-react native.
+React Native TypeScript Styles is an example project demonstrating how to apply
+styles in react native using [react-native-typescript-styles][react-native-typescript-styles].
 
-Read the blog post, ["React Native Styling: Structure for Style Organization"][blog-post]
+[react-native-typescript-styles]: https://github.com/thoughtbot/react-native-typescript-styles
 
-[blog-post]: https://thoughtbot.com/blog/structure-for-styling-in-react-native
+## Setup
+
+Install the JavaScript packages
+
+```
+yarn install
+```
+
+Install the Pods
+
+```
+npx pod-install
+```
+
+Build and run the app
+
+```
+yarn ios
+
+// or
+
+yarn android
+```
+
+## Organization
+
+The example app is a single screen with a section for each style module.
+
+![base example](./docs/base_example.png)
+
+### Colors
+
+![colors example 1](./docs/color_1.png)
+
+
+![colors example 2](./docs/color_2.png)
+
 
 About thoughtbot
 ----------------
 
 ![thoughtbot](https://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
 
-RNStylingTemplate is maintained and funded by thoughtbot, inc.
+React Native TypeScript Styles Example is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!
