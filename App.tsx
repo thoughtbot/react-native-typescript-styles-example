@@ -1,9 +1,3 @@
-import React from 'react';
+import App from "./src"
 
-import Root from './src';
-
-const App = () => {
-  return <Root />;
-};
-
-export default App;
+export default App
