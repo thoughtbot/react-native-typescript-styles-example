@@ -17,9 +17,11 @@ const App: FunctionComponent = () => {
       <View style={style.sectionContainer}>
         <BaseExample />
       </View>
+
       <View style={style.sectionContainer}>
         <ColorExample />
       </View>
+
       <View style={style.sectionContainer}>
         <TypographyExample />
       </View>
