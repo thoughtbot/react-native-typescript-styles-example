@@ -15,6 +15,7 @@
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-static-safe-area-insets": "^2.1.1",
     "react-native-typography": "^1.4.1"
   },
   "devDependencies": {
