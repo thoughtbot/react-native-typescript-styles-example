@@ -119,7 +119,7 @@ const style = StyleSheet.create({
     marginBottom: Sizing.x20,
   },
   subHeaderText: {
-    ...Typography.header.x40,
+    ...Typography.subheader.x40,
   },
   colorContainer: {
     marginBottom: Sizing.x5,

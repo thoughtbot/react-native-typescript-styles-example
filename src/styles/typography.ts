@@ -94,7 +94,7 @@ export const header: Record<Header, TextStyle> = {
   },
 }
 
-type Subheader = "x10" | "x20" | "x30" | "x40" | "x50" | "x60"
+type Subheader = "x10" | "x20" | "x30" | "x40"
 export const subheader: Record<Subheader, TextStyle> = {
   x10: {
     ...fontSize.x10,
@@ -115,16 +115,6 @@ export const subheader: Record<Subheader, TextStyle> = {
     ...fontSize.x40,
     ...fontWeight.semibold,
     ...lineHeight.x40,
-  },
-  x50: {
-    ...fontSize.x50,
-    ...fontWeight.semibold,
-    ...lineHeight.x50,
-  },
-  x60: {
-    ...fontSize.x60,
-    ...fontWeight.semibold,
-    ...lineHeight.x60,
   },
 }
 

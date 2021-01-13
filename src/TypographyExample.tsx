@@ -24,6 +24,16 @@ const TypographyExample: FunctionComponent = () => {
 
       <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
+          <Text style={style.subHeaderText}>Subheader</Text>
+        </View>
+        <Text style={style.x40subheader}>Subheader x40</Text>
+        <Text style={style.x30subheader}>Subheader x30</Text>
+        <Text style={style.x20subheader}>Subheader x20</Text>
+        <Text style={style.x10subheader}>Subheader x10</Text>
+      </View>
+
+      <View style={style.sectionContainer}>
+        <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Body</Text>
         </View>
         <Text style={style.x40body}>Body x40</Text>
@@ -46,13 +56,13 @@ const style = StyleSheet.create({
     ...Typography.header.x50,
   },
   sectionContainer: {
-    marginBottom: Sizing.x30,
+    marginBottom: Sizing.x60,
   },
   subHeaderContainer: {
     marginBottom: Sizing.x20,
   },
   subHeaderText: {
-    ...Typography.header.x40,
+    ...Typography.subheader.x40,
   },
   x60header: {
     ...Typography.header.x60,
@@ -76,6 +86,22 @@ const style = StyleSheet.create({
   },
   x10header: {
     ...Typography.header.x10,
+    marginBottom: Sizing.x10,
+  },
+  x40subheader: {
+    ...Typography.subheader.x40,
+    marginBottom: Sizing.x10,
+  },
+  x30subheader: {
+    ...Typography.subheader.x30,
+    marginBottom: Sizing.x10,
+  },
+  x20subheader: {
+    ...Typography.subheader.x20,
+    marginBottom: Sizing.x10,
+  },
+  x10subheader: {
+    ...Typography.subheader.x10,
     marginBottom: Sizing.x10,
   },
   x40body: {
