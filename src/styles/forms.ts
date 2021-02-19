@@ -6,7 +6,6 @@ import * as Sizing from "./sizing"
 import * as Typography from "./typography"
 
 type Input = "primary"
-
 export const input: Record<Input, TextStyle> = {
   primary: {
     ...Typography.body.x30,
