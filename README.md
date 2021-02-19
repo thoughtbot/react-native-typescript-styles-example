@@ -35,18 +35,19 @@ The example app is a single screen with a section for each style module.
 
 ### Base Example
 
-<img src="./docs/base_example.png" alt="the first section of the app, showing a header, some text, and a button." width="400" />
+<img src="./docs/base_example.png" alt="The first section of the app, showing a header, some text, and a button." width="400" />
 
 ### Colors
 
-<img src="./docs/colors_1.png" alt="a section of the app, showing a list of neutral colors." width="400" />
+<img src="./docs/colors_1.png" alt="A section of the app, showing a list of neutral colors." width="400" />
 
+<img src="./docs/colors_2.png" alt="A section of the app, showing a list of primary and secondary colors." width="400" />
 
-<img src="./docs/colors_2.png" alt="a section of the app, showing a list of primary and secondary colors." width="400" />
+### Typography
 
+<img src="./docs/typography.png" alt="A section of the app, showing the typographic options." width="400" />
 
-About thoughtbot
-----------------
+## About thoughtbot
 
 ![thoughtbot](https://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
 
