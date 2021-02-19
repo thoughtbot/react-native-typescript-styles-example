@@ -5,7 +5,7 @@ import { Sizing, Typography, Outlines, Colors, Buttons } from "./styles"
 
 const BaseExample: FunctionComponent = () => {
   return (
-    <View style={style.container}>
+    <View>
       <View style={style.headerContainer}>
         <Text style={style.headerText}>
           React Native Typescript Styles Example
@@ -45,9 +45,6 @@ const BaseExample: FunctionComponent = () => {
 }
 
 const style = StyleSheet.create({
-  container: {
-    marginBottom: Sizing.x80,
-  },
   headerContainer: {
     marginBottom: Sizing.x20,
     paddingBottom: Sizing.x20,
@@ -56,19 +53,16 @@ const style = StyleSheet.create({
   },
   headerText: {
     ...Typography.header.x60,
-    marginBottom: Sizing.x10,
+    marginBottom: Sizing.x20,
   },
   subheaderText: {
-    ...Typography.header.x20,
+    ...Typography.subheader.x30,
   },
   bodyContainer: {
     marginBottom: Sizing.x20,
   },
   bodyText: {
-    ...Typography.fontSize.x20,
-    ...Typography.fontWeight.regular,
-    ...Typography.lineHeight.x30,
-    color: Colors.neutral.s600,
+    ...Typography.body.x20,
     marginBottom: Sizing.x20,
   },
   button: {

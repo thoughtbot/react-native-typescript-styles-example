@@ -9,7 +9,8 @@ const ColorExample: FunctionComponent = () => {
       <View style={style.headerContainer}>
         <Text style={style.headerText}>Colors</Text>
       </View>
-      <View style={style.sectionContianer}>
+
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Neutral</Text>
         </View>
@@ -28,7 +29,7 @@ const ColorExample: FunctionComponent = () => {
         <ColorListItem color={Colors.neutral.black} label={"black"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Primary</Text>
         </View>
@@ -37,7 +38,7 @@ const ColorExample: FunctionComponent = () => {
         <ColorListItem color={Colors.primary.s600} label={"s600"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Secondary</Text>
         </View>
@@ -46,28 +47,28 @@ const ColorExample: FunctionComponent = () => {
         <ColorListItem color={Colors.secondary.s600} label={"s600"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Danger</Text>
         </View>
         <ColorListItem color={Colors.danger.s400} label={"s400"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Success</Text>
         </View>
         <ColorListItem color={Colors.success.s400} label={"s400"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Warning</Text>
         </View>
         <ColorListItem color={Colors.warning.s400} label={"s400"} />
       </View>
 
-      <View style={style.sectionContianer}>
+      <View style={style.sectionContainer}>
         <View style={style.subHeaderContainer}>
           <Text style={style.subHeaderText}>Transparent</Text>
         </View>
@@ -111,14 +112,14 @@ const style = StyleSheet.create({
   headerText: {
     ...Typography.header.x50,
   },
-  sectionContianer: {
-    marginBottom: Sizing.x10,
+  sectionContainer: {
+    marginBottom: Sizing.x30,
   },
   subHeaderContainer: {
     marginBottom: Sizing.x20,
   },
   subHeaderText: {
-    ...Typography.header.x40,
+    ...Typography.subheader.x40,
   },
   colorContainer: {
     marginBottom: Sizing.x5,

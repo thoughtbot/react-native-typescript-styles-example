@@ -4481,6 +4481,11 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-static-safe-area-insets@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-static-safe-area-insets/-/react-native-static-safe-area-insets-2.1.1.tgz#394a3510c7029288895bbaccf1dadf4fa46c4b88"
+  integrity sha512-NUSRNZp+0IJOuLeoHoU4kw/cY9g7ozUo2ApCbJAiPyYbkbv49S8gdAcZRkeR0nqwzFDA07sCZCbPI03iEV0RTQ==
+
 react-native-typography@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/react-native-typography/-/react-native-typography-1.4.1.tgz#2d05cb5935a2f7fdb6b43bbde93d60f1324578e3"

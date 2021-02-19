@@ -26,13 +26,11 @@ export const bar: Record<Bar, ViewStyle> = {
 type BarText = "primary" | "secondary"
 export const barText: Record<BarText, TextStyle> = {
   primary: {
-    ...Typography.fontSize.x20,
-    ...Typography.fontWeight.semibold,
+    ...Typography.subheader.x20,
     color: Colors.neutral.white,
   },
   secondary: {
-    ...Typography.fontSize.x10,
-    ...Typography.fontWeight.regular,
+    ...Typography.body.x20,
     color: Colors.neutral.s500,
   },
 }
