@@ -1,4 +1,9 @@
-import { TextStyle, ViewStyle } from "react-native"
+import {
+  TextStyle,
+  ViewStyle,
+  PressableStateCallbackType,
+  Platform,
+} from "react-native"
 
 import * as Colors from "./colors"
 import * as Outlines from "./outlines"
@@ -26,11 +31,13 @@ export const bar: Record<Bar, ViewStyle> = {
 type BarText = "primary" | "secondary"
 export const barText: Record<BarText, TextStyle> = {
   primary: {
-    ...Typography.subheader.x20,
+    ...Typography.fontSize.x30,
+    ...Typography.fontWeight.semibold,
     color: Colors.neutral.white,
   },
   secondary: {
-    ...Typography.body.x20,
+    ...Typography.fontSize.x10,
+    ...Typography.fontWeight.regular,
     color: Colors.neutral.s500,
   },
 }
@@ -45,4 +52,18 @@ export const circular: Record<Circular, ViewStyle> = {
     backgroundColor: Colors.primary.brand,
     borderRadius: Outlines.borderRadius.max,
   },
+}
+
+const opacity = (state: PressableStateCallbackType): ViewStyle => {
+  const opacity = state.pressed ? 0.65 : 1
+  return { opacity }
+}
+
+export const applyOpacity = (style: ViewStyle) => {
+  return (state: PressableStateCallbackType): ViewStyle => {
+    return {
+      ...style,
+      ...opacity(state),
+    }
+  }
 }

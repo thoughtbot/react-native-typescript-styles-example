@@ -32,10 +32,10 @@ const BaseExample: FunctionComponent = () => {
           and neutral colors.
         </Text>
       </View>
-      <Pressable style={style.button}>
+      <Pressable style={Buttons.applyOpacity(style.button)}>
         <Text style={style.buttonText}>Buttons are Useful</Text>
       </Pressable>
-      <Pressable style={style.secondaryButton}>
+      <Pressable style={Buttons.applyOpacity(style.secondaryButton)}>
         <Text style={style.secondaryButtonText}>
           Not all buttons need a background
         </Text>
@@ -48,8 +48,8 @@ const style = StyleSheet.create({
   headerContainer: {
     marginBottom: Sizing.x20,
     paddingBottom: Sizing.x20,
-    borderBottomWidth: Outlines.borderWidth.thin,
-    borderColor: Colors.neutral.s100,
+    borderBottomWidth: Outlines.borderWidth.hairline,
+    borderColor: Colors.neutral.s200,
   },
   headerText: {
     ...Typography.header.x60,
@@ -74,6 +74,7 @@ const style = StyleSheet.create({
   },
   secondaryButton: {
     ...Buttons.bar.secondary,
+    marginBottom: Sizing.x10,
   },
   secondaryButtonText: {
     ...Buttons.barText.secondary,

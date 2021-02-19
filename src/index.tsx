@@ -22,7 +22,7 @@ const App: FunctionComponent = () => {
         <ColorExample />
       </View>
 
-      <View style={style.sectionContainer}>
+      <View style={{ ...style.sectionContainer, borderBottomWidth: 0 }}>
         <TypographyExample />
       </View>
     </ScrollView>
@@ -40,7 +40,6 @@ const style = StyleSheet.create({
     padding: Sizing.x20,
   },
   sectionContainer: {
-    paddingBottom: Sizing.x20,
     marginBottom: Sizing.x20,
     borderBottomWidth: Outlines.borderWidth.thin,
     borderColor: Colors.neutral.s100,
