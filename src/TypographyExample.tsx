@@ -11,9 +11,7 @@ const TypographyExample: FunctionComponent = () => {
       </View>
 
       <View style={style.sectionContainer}>
-        <View style={style.subHeaderContainer}>
-          <Text style={style.subHeaderText}>Header</Text>
-        </View>
+        <Text style={style.x70header}>Header x70</Text>
         <Text style={style.x60header}>Header x60</Text>
         <Text style={style.x50header}>Header x50</Text>
         <Text style={style.x40header}>Header x40</Text>
@@ -23,9 +21,7 @@ const TypographyExample: FunctionComponent = () => {
       </View>
 
       <View style={style.sectionContainer}>
-        <View style={style.subHeaderContainer}>
-          <Text style={style.subHeaderText}>Subheader</Text>
-        </View>
+        <Text style={style.x50subheader}>Subheader x50</Text>
         <Text style={style.x40subheader}>Subheader x40</Text>
         <Text style={style.x30subheader}>Subheader x30</Text>
         <Text style={style.x20subheader}>Subheader x20</Text>
@@ -33,9 +29,7 @@ const TypographyExample: FunctionComponent = () => {
       </View>
 
       <View style={style.sectionContainer}>
-        <View style={style.subHeaderContainer}>
-          <Text style={style.subHeaderText}>Body</Text>
-        </View>
+        <Text style={style.x50body}>Body x50</Text>
         <Text style={style.x40body}>Body x40</Text>
         <Text style={style.x30body}>Body x30</Text>
         <Text style={style.x20body}>Body x20</Text>
@@ -58,11 +52,9 @@ const style = StyleSheet.create({
   sectionContainer: {
     marginBottom: Sizing.x60,
   },
-  subHeaderContainer: {
-    marginBottom: Sizing.x20,
-  },
-  subHeaderText: {
-    ...Typography.subheader.x40,
+  x70header: {
+    ...Typography.header.x70,
+    marginBottom: Sizing.x10,
   },
   x60header: {
     ...Typography.header.x60,
@@ -88,6 +80,10 @@ const style = StyleSheet.create({
     ...Typography.header.x10,
     marginBottom: Sizing.x10,
   },
+  x50subheader: {
+    ...Typography.subheader.x50,
+    marginBottom: Sizing.x10,
+  },
   x40subheader: {
     ...Typography.subheader.x40,
     marginBottom: Sizing.x10,
@@ -102,6 +98,10 @@ const style = StyleSheet.create({
   },
   x10subheader: {
     ...Typography.subheader.x10,
+    marginBottom: Sizing.x10,
+  },
+  x50body: {
+    ...Typography.body.x50,
     marginBottom: Sizing.x10,
   },
   x40body: {
